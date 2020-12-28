@@ -93,14 +93,9 @@ if __name__ == '__main__':
             #logic buliding for tasks
         
             if "open google" in query:
-                speak("sir what should i search in google")
+                speak("what should i search in google")
                 tw = takecommand().lower()
                 tc = webbrowser.open(f"{tw}")
-                
-            elif "close" or "exit" or "no thanks" in query:
-                speak('thanks for your interaction, may the force be with you')
-                sys.exit()
-            
             
             elif "play music" in query:
                 music_dir = "E:\\music"
@@ -149,8 +144,12 @@ if __name__ == '__main__':
                     speak('network connection failed')
             
             elif "send message" in query:
-                for i in range(10):
-                    kit.sendwhatmsg("+91 79757 99132", "'ootak baare sade fuck you'+i",12,50)
+                
+                kit.sendwhatmsg("+91 79757 99132", "'good afternoon'",12,50)
+            
+            elif "close" or "exit" or "no thanks" in query:
+                speak('thanks for your interaction, may the force be with you')
+                sys.exit()
              
             
             speak('do you have any other thing to say')    
